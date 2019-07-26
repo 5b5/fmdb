@@ -35,11 +35,6 @@
     return self;
 }
 
-- (void)finalize {
-    [self close];
-    [super finalize];
-}
-
 - (void)dealloc {
     [self close];
     

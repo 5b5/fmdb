@@ -46,11 +46,6 @@
     return self;
 }
 
-- (void)finalize {
-    [self close];
-    [super finalize];
-}
-
 - (void)dealloc {
     [self close];
     
@@ -1021,11 +1016,6 @@ static int bindNSString(sqlite3_stmt *pStmt, int idx, NSString *str) {
 @synthesize statement;
 @synthesize query;
 @synthesize useCount;
-
-- (void)finalize {
-    [self close];
-    [super finalize];
-}
 
 - (void)dealloc {
     [self close];
